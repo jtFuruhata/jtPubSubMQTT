@@ -1,0 +1,9 @@
+{
+  "projectId": "PROJECT_ID",
+  "cloudRegion": "REGION",
+  "registryId": "my-registry",
+  "deviceId": "my-device",
+  "privateKeyFile": "rsa_private.pem",
+  "serverCertFile": "roots.pem",
+  "algorithm": "RS256"
+}
