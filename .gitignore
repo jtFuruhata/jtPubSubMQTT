@@ -1,3 +1,10 @@
+# setting files
+.vscode/
+*.code-workspace
+/keys/*
+!.gitkeep
+package-lock.json
+
 # Logs
 logs
 *.log
