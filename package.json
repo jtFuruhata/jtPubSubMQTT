@@ -1,0 +1,34 @@
+{
+  "name": "jtpubsubmqtt",
+  "version": "0.0.1",
+  "description": "MQTT gateway for Google Cloud Platform IoT Core and Pub/Sub",
+  "author": "TANAHASHI, Jiro (aka jtFuruhata) <jt@do-johodai.ac.jp>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jtFuruhata/jtPubSubMQTT.git"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "@google-cloud/iot": "^2.0.0",
+    "@google-cloud/pubsub": "^2.0.0",
+    "mqtt": "^4.0.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "express-generator": "^4.16.1",
+    "nodemon": "^2.0.7",
+    "mocha": "^8.1.1",
+    "uuid": "^8.0.0"
+  }
+}
