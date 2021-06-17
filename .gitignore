@@ -1,7 +1,7 @@
 # setting files
 .vscode/
 *.code-workspace
-/keys/*
+/cert/*
 !.gitkeep
 package-lock.json
 
