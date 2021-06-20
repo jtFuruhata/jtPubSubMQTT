@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const GcpMqtt = require('../model/jtGcpMqtt');
+const GcpMqtt = require('../model/jtGcpIotMqtt');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

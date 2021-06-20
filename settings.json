@@ -2,7 +2,11 @@
   "projectId": "PROJECT_ID",
   "cloudRegion": "REGION",
   "registryId": "my-registry",
+  "subscriptionId": "my-subscription",
   "deviceId": "my-device",
+  "serviceAccount": "my-account",
+  "clientId": "iam-unique-id",
+  "privateKeyId": "iam-service-account-key",
   "privateKeyFile": "rsa_private.pem",
   "serverCertFile": "roots.pem",
   "algorithm": "RS256"

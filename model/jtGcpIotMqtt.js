@@ -1,3 +1,12 @@
+/**
+ * @file Google Cloud IoT Core over MQTT module
+ *      jtGcpIotMqtt.js
+ * @module ./jtGcpIotMqtt
+ * @version 0.11.210619a
+ * @author TANAHASHI, Jiro (aka jtFuruhata) <jt@do-johodai.ac.jp>
+ * @license MIT (see 'LICENSE' file)
+ * @copyright (C) 2021 jtLab, Hokkaido Information University
+ */
 const fs = require('fs');
 const jwt = require('jsonwebtoken');
 const mqtt = require('mqtt');
@@ -22,7 +31,11 @@ class GcpMqtt {
       "projectId": "PROJECT_ID",
       "cloudRegion": "REGION",
       "registryId": "my-registry",
+      "subscriptionId": "my-subscription",
       "deviceId": "my-device",
+      "serviceAccount": "my-account",
+      "clientId": "iam-unique-id",
+      "privateKeyId": "iam-service-account-key",
       "privateKeyFile": "rsa_private.pem",
       "serverCertFile": "roots.pem",
       "algorithm": "RS256"
@@ -54,8 +67,8 @@ class GcpMqtt {
     this.iatTime = parseInt(Date.now() / 1000);
     this.client = mqtt.connect(this.connectionArgs);
   
-    this.client.subscribe(`/devices/${this.args.deviceId}/config`, {qos: 1});
-    this.client.subscribe(`/devices/${this.args.deviceId}/commands/#`, {qos: 0});
+//    this.client.subscribe(`/devices/${this.args.deviceId}/config`, {qos: 1});
+//    this.client.subscribe(`/devices/${this.args.deviceId}/commands/#`, {qos: 0});
     this.mqttTopic = `/devices/${this.args.deviceId}/${this.messageType}`;  
   
     this.client.on('connect', success => {
