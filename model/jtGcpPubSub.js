@@ -79,8 +79,7 @@ class GcpPubSub{
   messageHandler(message) {
     console.log(`Received message ${message.id}:`);
     console.log(`\tData: ${message.data}`);
-    console.log(`\tAttributes:`);
-    console.log(message.attributes);
+    console.log(`\tAttributes: ${message.attributes}`);
     message.ack();
   }
 }

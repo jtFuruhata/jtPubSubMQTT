@@ -1,3 +1,11 @@
 const GcpMqtt = new require("./model/jtGcpIotMqtt");
+const sleep = require('./model/jtSleep');
 
-const gcpmqtt = new GcpMqtt();
+async function main(){
+    const gcpmqtt = new GcpMqtt();
+    await gcpmqtt.open();
+    await gcpmqtt.publish("howdyFromStandslone.js");
+    await gcpmqtt.close();
+}
+
+main();
