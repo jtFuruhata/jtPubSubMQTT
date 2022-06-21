@@ -13,7 +13,9 @@
   },
   "scripts": {
     "start": "nodemon ./bin/www",
-    "standalone": "node standalone.js"
+    "standalone": "node standalone.js",
+    "pub": "node standalone.js",
+    "sub": "node model/jtGcpPubSub.js"
   },
   "dependencies": {
     "@google-cloud/iot": "^2.0.0",
